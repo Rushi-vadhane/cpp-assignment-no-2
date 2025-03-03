@@ -1,1 +1,108 @@
+1)
+#include <iostream>
+#include <conio.h>
+using namespace std;
+class Power
+{
+public:
+    int power(int n)
+    {
+        int i, result = 1;
+        for (i = 1; i <= 2; i++)
+        {
+            result = result * n;
+        }
+        return result;
+    }
+};
+int main()
+{
+    int n;
+    cout << "Enter a number:";
+    cin >> n;
+    Power p;
+    cout << "The power of " << n << " is " << p.power(n) << endl;
+}
 
+*******************************************************************************
+2)
+#include <iostream>
+#include <conio.h>
+using namespace std;
+int main()
+{
+    int acc;
+    char name[50];
+    char address[50];
+    long int contact;
+    float balance;
+    cout << "Enter Account number:";
+    cin >> acc;
+    cout << "Enter Account name:";
+    cin >> name;
+    cout << "Enter Account address:";
+    cin >> address;
+    cout << "Enter Account contact:";
+    cin >> contact;
+    cout << "Enter Account balance:" << endl;
+    cin >> balance;
+
+    cout << "The account details are--" << endl;
+    cout << "Account number:" << acc << endl;
+    cout << "Account name:" << name << endl;
+    cout << "Account address:" << address << endl;
+    cout << "Account contact:" << contact << endl;
+    cout << "Account balance:" << balance << endl;
+
+    cout << "Enter deposit amount:";
+    int d;
+    cin >> d;
+
+    balance = balance + d;
+    cout << "New Account balance:" << balance << endl;
+    getch();
+    return 0;
+}
+*************************************************************************
+3)
+/*accept n float numbers and store it an array and display alternate element(use dynamic memory allocation)*/
+#include <iostream>
+#include <conio.h>
+#include <string.h>
+using namespace std;
+class Float
+{
+private:
+    double* n;
+    int size;
+public:
+    void accept(int s)
+    {
+        n = new double[size];
+        size = s;
+        for (int i = 0;i < size;i++)
+        {
+            cout << "Enter " << i + 1 << " float number:";
+            cin >> n[i];
+        }
+    }
+    void display()
+    {
+        for (int i = 0;i < size;i++)
+        {
+            cout << n[i] << "\t";
+        }
+    }
+};
+int main()
+{
+    Float f;
+    int size;
+    cout << "Enter size of array:";
+    cin >> size;
+    f.accept(size);
+    f.display();
+    getch();
+    return 0;
+}
+*******************************************************************************
